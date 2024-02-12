@@ -1,10 +1,16 @@
 import { NavLink } from "react-router-dom";
 import { Button } from "../ui/button";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <header className="h-16">
-      <nav className="w-full max-w-[1220px] mx-auto h-16 px-[20px] flex justify-between items-center">
+    <motion.header
+      className="h-16 fixed w-full z-[999]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.5, duration: 1 }}
+    >
+      <nav className="bg-slate-400 w-full max-w-[1290px] mx-auto h-16 px-[20px] flex justify-between items-center">
         <span className="text-3xl">
           <NavLink to="/">EverGreen</NavLink>
         </span>
@@ -16,7 +22,7 @@ const Navbar = () => {
           </Button>
         </ul>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 

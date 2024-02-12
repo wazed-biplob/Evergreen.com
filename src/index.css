@@ -19,6 +19,10 @@
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
 
+    --grey: 0 0 70%;
+    --light-grey: 0 0% 95%;
+    --dark-grey: 240 3% 32%;
+
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
 
@@ -75,5 +79,8 @@
   }
   html {
     font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    @apply text-6xl font-semibold;
   }
 }

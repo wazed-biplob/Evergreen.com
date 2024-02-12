@@ -2,13 +2,11 @@ import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 interface IConatainerProps {
   children: ReactNode;
-  className: string;
+  className?: string;
 }
 const Container = ({ children, className }: IConatainerProps) => {
   return (
-    <div
-      className={cn("w-full max-w-[1220px] mx-auto h-16 px-[20px]", className)}
-    >
+    <div className={cn("w-full max-w-[1290px] mx-auto px-[20px]", className)}>
       {children}
     </div>
   );
